@@ -53,24 +53,26 @@ function fetchTweets(){
 
     //call the get method twitter
 	client.get('statuses/user_timeline', parameters, function(error, tweets, response){
-		if (!error) {console.log(tweets);
-	        // for (i=0; i<tweets.length; i++) {
-	        //     var returnedData = ('Number: ' + (i+1) + '\n' + tweets[i].created_at + '\n' + tweets[i].text + '\n');
-	        //     console.log(returnedData);
-	        //     console.log("-------------------------");
+		 if (!error) {
+			 console.log(fetchTweets);
+	    //     for (i=0; i<tweets.length; i++) {
+	    //         var returnedData = ('Number: ' + (i+1) + '\n' + tweets[i].created_at + '\n' + tweets[i].text + '\n');
+	    //         console.log(returnedData);
+	    //         console.log("-------------------------");
 	        }
-	}); //end client.get
-	// }); //end twitter parameters
-}//end fetchTweets
+	    // };//end client.get
+	});//end twitter parameters
+}//end fetchTweets;
+
 
 function spotifyMe(){
-	console.log("Music to your hears!");
+	console.log("Music to your ears!");
 
 	//variable for search term, test if defined.
 
 	var searchTrack;
 	if(secondCommand === undefined){
-		searchTrack = "What's My Age Again?";
+		searchTrack = "Who Am I?";
 	}else{
 		searchTrack = secondCommand;
 	}
@@ -139,4 +141,5 @@ function followCommands(){
 };//end followCommands
 
 theDualSwitch();
+
 
