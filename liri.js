@@ -55,12 +55,12 @@ function fetchTweets(){
 	client.get('statuses/user_timeline', parameters, function(error, tweets, response){
 		 if (!error) {
 			 console.log(fetchTweets);
-	    //     for (i=0; i<tweets.length; i++) {
-	    //         var returnedData = ('Number: ' + (i+1) + '\n' + tweets[i].created_at + '\n' + tweets[i].text + '\n');
-	    //         console.log(returnedData);
-	    //         console.log("-------------------------");
+	        for (i=0; i<tweets.length; i++) {
+	            var returnedData = ('Number: ' + (i+1) + '\n' + tweets[i].created_at + '\n' + tweets[i].text + '\n');
+	            console.log(returnedData);
+	            console.log("-------------------------");
 	        }
-	    // };//end client.get
+	    };//end client.get
 	});//end twitter parameters
 }//end fetchTweets;
 
